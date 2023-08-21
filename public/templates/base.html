@@ -1,0 +1,654 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <title>TK Ayurvedic Pharmacy</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="{% static 'images/nav-logo-img.png' %}" alt="">
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="{% url 'home' %}" class="nav__link active-link">Home</a>
+                        </li>
+
+                        {% if user.is_authenticated and user.is_staff %}
+                        <li class="nav__item">
+                            <a href="{% url 'ManageBooking' %}" class="nav__link">Manage</a>
+                        </li>
+                        {% endif %}
+                        
+
+                        <li class="nav__item">
+                            <a href="{% url 'About' %}" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{% url 'Treatment' %}" class="nav__link">Treatment</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="{% url 'Contact' %}" class="nav__link">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'Logout' %}" class=" change-theme" style="color: green;">Logout</a>
+                    {% else %}
+                    <a href="{% url 'Login' %}" class=" change-theme" style="color: green;">Login</a>
+                    {% endif %}
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+{% block content %}
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="{% static 'images/20230430_195223.png' %}" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title"></h1>
+                        <p class="home__description ">
+                            The path pf surrender doesn't mean inaction. Take action from there, claim inner peace.Be safe be the light.
+                        </p>
+                        <!-- <a href="#about" class="button button--flex">
+                            Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a> -->
+                    </div>
+
+                    <!-- <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="{% static 'images/Karkidaka-Chikitsa1.jpg' %}" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            Who we really are & <br> why choose us
+                        </h2>
+
+                        <p class="about__description">
+                            focus on using natural ingredients and adopting a holistic approach to health.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We always deliver on time.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We give you guides to protect and care for your treatment.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                We always come over for a check-up after sale.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                100% money back guaranteed.
+                            </p>
+                        </div>
+
+                        <a href="#" class="button--link button--flex">
+                            Book Now <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        Steps to start your <br> treatment off right
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 class="steps__card-title">Choose Your Treatment</h3>
+                            <p class="steps__card-description">
+                                First go to the treatment page and select the treatment you want.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 class="steps__card-title">Book Your Treatment</h3>
+                            <p class="steps__card-description">
+                                Give your details and book, then you wait for the date.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">03</div>
+                            <h3 class="steps__card-title">receiving Date</h3>
+                            <p class="steps__card-description">
+                                You will receive a suitable date via email a day before or after.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PRODUCTS ====================-->
+            <section class="product section container" id="products">
+                <h2 class="section__title-center">
+                    Check out our <br> Tretments
+                </h2>
+
+                <p class="product__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit Praesentium odio culpa,
+                </p>
+
+                <div class="product__container grid">
+                    <article class="product__card" style="border-radius: 50%;">
+                        <!-- <div class="product__circle"></div> -->
+
+                        <img src="{% static 'images/AdobeStock_309283401-1024x683.jpeg' %}" alt="" class="product__img" style="border-radius: 50%;">
+
+                        <h3 class="product__title">Cacti Plant</h3>
+                        <!-- <span class="product__price">$19.99</span> -->
+
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <!-- <div class="product__circle"></div> -->
+
+                        <img src="{% static 'images/neck-pain-840x594.jpg' %}" alt="" class="product__img" style="border-radius: 50%;">
+
+                        <h3 class="product__title">Cactus Plant</h3>
+                        <!-- <span class="product__price">$11.99</span> -->
+
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <!-- <div class="product__circle"></div> -->
+
+                        <img src="{% static 'images/Female-Infertility-Bandhyatva.jpg' %}" alt="" class="product__img" style="border-radius: 50%;">
+
+                        <h3 class="product__title">Aloe Vera Plant</h3>
+                        <!-- <span class="product__price">$7.99</span> -->
+
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <!-- <div class="product__circle"></div> -->
+
+                        <img src="{% static 'images/hairfall-1024x517.jpg' %}" alt="" class="product__img" style="border-radius: 50%;">
+
+                        <h3 class="product__title">Succulent Plant</h3>
+                        <!-- <span class="product__price">$5.99</span> -->
+
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <!-- <div class="product__circle"></div> -->
+
+                        <img src="{% static 'images/PilesAyurveda.png' %}" alt="" class="product__img" style="border-radius: 50%;">
+
+                        <h3 class="product__title">Succulent Plant</h3>
+                        <!-- <span class="product__price">$10.99</span> -->
+
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button>
+                    </article>
+
+                    <article class="product__card">
+                        <!-- <div class="product__circle"></div> -->
+
+                        <img src="{% static 'images/migraine.png' %}" alt="" class="product__img" style="border-radius: 50%;">
+
+                        <h3 class="product__title">Green Plant</h3>
+                        <!-- <span class="product__price">$8.99</span> -->
+
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Some common questions <br> were often asked
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Are the results from <i>Ottamooli Treatment</i> temporary or permanent?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Both temporary treatment and full replacement treatment are available here.
+                                    Temporary treatment is for temporary diseas like fever,cough, cold, etc.
+                                    And chronic diseases can be completely cured by this treatment. 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How many days of treatement are needed for chronic diseases?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Chronic diseases are treated according to illness and age. It is impossible to say how many days of treatment it will take.
+                                    If it is an old person, it can be treated and cured only after many days of treatment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How are medines prepared for <i>Ottamooli Treatment</i>?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Will there be any side effects from taking <i>Ottamooli Treatment</i>?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I change the pots?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Why are gnats flying around my plant?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Reach out to us today <br> via any of the given <br> information
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Call us for instant support</h3>
+                                <span class="contact__description">
+                                    <i class="ri-phone-line contact__icon"></i>
+                                    +91 7902230142
+                                </span>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Write us by mail</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    tkayurvedicpharmacy@gmail.com
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form method="post" action="{% url 'home' %}" class="contact__form">
+                        {% csrf_token %}
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                                <input type="text" name="subject" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Subject</label>
+                            </div>
+
+                            <div class="contact__content">
+                                <input type="email" name="sender" placeholder=" " class="contact__input">
+                                <label for="" class="contact__label">Email</label>
+                            </div>
+
+                            <div class="contact__content contact__area">
+                                <textarea name="message" name="message" placeholder=" " class="contact__input"></textarea>                              
+                                <label for="" class="contact__label">Message</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="button button--flex">
+                            Send Message
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+
+                </div>
+            </section>
+        </main>
+        {% endblock content %}
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <img src="{% static 'images/nav-logo-img.png' %}" alt="" class="footer__logo-icon">
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our newsletter <br> to stay update
+                    </h3>
+
+                    <!-- <div class="footer__subscribe">
+                        <input type="email" placeholder="Enter your email" class="footer__input">
+
+                        <button class="button button--flex footer__button">
+                            Subscribe
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </div> -->
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">TK Ayurvedic</li>
+                        <li class="footer__information">Near Thrikkuttissery School</li>
+                        <li class="footer__information">Balussery - 673613</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+91 7907483052</li>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        We accept all credit cards
+                    </h3>
+
+                    <div class="footer__cards">
+                        <img src="assets/img/card1.png" alt="" class="footer__card">
+                        <img src="assets/img/card2.png" alt="" class="footer__card">
+                        <img src="assets/img/card3.png" alt="" class="footer__card">
+                        <img src="assets/img/card4.png" alt="" class="footer__card">
+                    </div>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; AK Creative Design. All rigths reserved</p>
+        </footer>
+
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+    /*=============== SHOW MENU ===============*/
+    const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
+
+    /*===== MENU SHOW =====*/
+    /* Validate if constant exists */
+    if(navToggle){
+        navToggle.addEventListener('click', () =>{
+            navMenu.classList.add('show-menu')
+        })
+    }
+        
+    /*===== MENU HIDDEN =====*/
+    /* Validate if constant exists */
+    if(navClose){
+        navClose.addEventListener('click', () =>{
+            navMenu.classList.remove('show-menu')
+        })
+    }
+
+    /*=============== REMOVE MENU MOBILE ===============*/
+    const navLink = document.querySelectorAll('.nav__link')
+
+    function linkAction(){
+        const navMenu = document.getElementById('nav-menu')
+        // When we click on each nav__link, we remove the show-menu class
+        navMenu.classList.remove('show-menu')
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction))
+
+    //End//
+
+    // Text Animation//
+    var typingEffect = new Typed(".home__title",{
+            strings : ["Welcome To TK Ayurvedic Pharmacy","വയനാടൻ ഒറ്റമൂലി ചികിത്സ","25 വർഷത്തെ സേവന പാരമ്പര്യം"],
+            loop : true,
+            typeSpeed : 100,
+            //backSpeed : 80,
+            startDelay : 2000,
+            backDelay : 1500,
+        })
+
+        //End//
+
+
+    
+    /*=============== CHANGE BACKGROUND HEADER ===============*/
+    function scrollHeader(){
+        const header = document.getElementById('header')
+        // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+        if(this.scrollY >= 80) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
+    }
+    window.addEventListener('scroll', scrollHeader)
+
+        
+    /*=============== QUESTIONS ACCORDION ===============*/
+    const accordionItems = document.querySelectorAll('.questions__item')
+
+    accordionItems.forEach((item) =>{
+        const accordionHeader = item.querySelector('.questions__header')
+
+        accordionHeader.addEventListener('click', () =>{
+            const openItem = document.querySelector('.accordion-open')
+
+            toggleItem(item)
+
+            if(openItem && openItem!== item){
+                toggleItem(openItem)
+            }
+        })
+    })
+    
+    const toggleItem = (item) =>{
+        const accordionContent = item.querySelector('.questions__content')
+
+        if(item.classList.contains('accordion-open')){
+            accordionContent.removeAttribute('style')
+            item.classList.remove('accordion-open')
+        }else{
+            accordionContent.style.height = accordionContent.scrollHeight + 'px'
+            item.classList.add('accordion-open')
+        }
+
+    }
+
+        
+    /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+    const sections = document.querySelectorAll('section[id]')
+
+    function scrollActive(){
+        const scrollY = window.pageYOffset
+
+        sections.forEach(current =>{
+            const sectionHeight = current.offsetHeight,
+                sectionTop = current.offsetTop - 58,
+                sectionId = current.getAttribute('id')
+
+            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            }else{
+                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            }
+        })
+    }
+    window.addEventListener('scroll', scrollActive)
+
+        
+    /*=============== SHOW SCROLL UP ===============*/ 
+    function scrollUp(){
+        const scrollUp = document.getElementById('scroll-up');
+        // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+        if(this.scrollY >= 400) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    }
+    window.addEventListener('scroll', scrollUp)
+
+        
+    /*=============== SCROLL REVEAL ANIMATION ===============*/
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 400,
+        // reset: true
+    })
+
+    sr.reveal('.home__data')
+    sr.reveal('.home__img', {delay: 500})
+    sr.reveal('.home__social', {delay: 600})
+    sr.reveal('.about__img, .contact__box',{origin: 'left'})
+    sr.reveal('.about__data, .contact__form',{origin: 'right'})
+    sr.reveal('.steps__card, .product__card, .questions__group, .footer',{interval: 100})
+
+        </script>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script>
+            
+        </script>
+    </body>
+</html>
