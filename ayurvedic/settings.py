@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-60o8k_u)tf-&gc5hp0j72rybolr)63+ssa!p6ef^d_p0$fgf=u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['43.205.143.9','localhost']
 
 
 # Application definition
@@ -65,12 +65,12 @@ WSGI_APPLICATION = 'ayurvedic.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "ayurvedic",
-        "USER": "root",
-        "PASSWORD": "",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "tkayur",
+        "USER": "postgres",
+        "PASSWORD": "143@malIKKA",
         "HOST": "localhost",
-        "PORT": "3306",
+        "PORT": "5432",
     }
 }
 
