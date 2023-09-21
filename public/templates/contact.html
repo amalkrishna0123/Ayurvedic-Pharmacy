@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -32,7 +33,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        background:bottom  no-repeat url(/static/images/IMG_20230514_125620.jpg);
+        background:bottom  no-repeat url({% static 'images/IMG_20230514_125620.jpg' %});
         object-fit: cover;
         background-size: cover;
     }
@@ -161,7 +162,6 @@
        .wrapper{
         width: 300px;
         height: 750px;
-        margin-left: 10px;
         margin-top: 80px;
        } 
        .form-wrapper{
@@ -283,6 +283,27 @@
         }
         .ContactUs{
             font-size: 2.3rem;
+        }
+    }
+
+    @media screen and (max-width:480px){
+        .wrapper{
+            width: 460px;
+            margin-left: 10px;
+        }
+        .contactInfo {
+            /* background-color: #54880e; */
+            margin-left: 30px;
+        }
+        .ContactUs{
+            /* background-color: #54880e; */
+            margin-left: 40px;
+        }
+        .input-box{
+            margin-left: 40px;
+        }
+        .Button__Message{
+            margin-left: 40px;
         }
     }
 

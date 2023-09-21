@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
@@ -29,7 +30,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        background:bottom url(/static/images/IMG_20230514_125620.jpg);
+        background:bottom url({% static 'images/IMG_20230514_125620.jpg' %});
         margin-top: 100px;
         margin-left: 350px;
     }

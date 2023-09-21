@@ -249,7 +249,7 @@ img{
 .home__description{
     margin-bottom: var(--mb-2-5);
     opacity: 0;
-    animation: slideLeft 1s ease forwards;
+    /* animation: slideLeft 1s ease forwards; */
     animation-delay: 1s;
     letter-spacing: 1px;
     color: #fff;

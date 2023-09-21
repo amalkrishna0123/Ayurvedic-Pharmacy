@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -21,6 +22,9 @@ a,
 a:hover {
     text-decoration: none;
     color: inherit;
+}
+.nav__btns .Login{
+    margin-right: 10px;
 }
 
 .section-products {
@@ -71,65 +75,65 @@ a:hover {
 }
 
 .section-products #product-1 .part-1::before {
-    background: url("/static/images/2252940.jpeg") no-repeat center;
+    background: url("{% static 'images/2252940.jpeg' %}") no-repeat center;
     background-size: cover;
 		transition: all 0.3s;
 }
 
 .section-products #product-2 .part-1::before {
-    background: url("/static/images/migraine.png") no-repeat center;
+    background: url("{% static 'images/migraine.png' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-3 .part-1::before {
-    background: url("/static/images/AdobeStock_309283401-1024x683.jpeg") no-repeat center;
+    background: url("{% static 'images/AdobeStock_309283401-1024x683.jpeg' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-4 .part-1::before {
-    background: url("/static/images/Female-Infertility-Bandhyatva.jpg") no-repeat center;
+    background: url("{% static 'images/Female-Infertility-Bandhyatva.jpg' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-5 .part-1::before {
-    background: url("/static/images/gout-840x473.jpg") no-repeat center;
+    background: url("{% static 'images/gout-840x473.jpg' %}") no-repeat center;
     background-size: cover;
 		transition: all 0.3s;
 }
 
 .section-products #product-6 .part-1::before {
-    background: url("/static/images/migraine.png") no-repeat center;
+    background: url("{% static 'images/migraine.png' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-7 .part-1::before {
-    background: url("/static/images/neck-pain-840x594.jpg") no-repeat center;
+    background: url("{% static 'images/neck-pain-840x594.jpg' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-8 .part-1::before {
-    background: url("/static/images/how-to-lose-weight-in-month-ayurveda-doctor-shared-6-amazing-tips-to-loss-weight-without-gym-and-dieting-92643907.jpg") no-repeat center;
+    background: url("{% static 'images/how-to-lose-weight-in-month-ayurveda-doctor-shared-6-amazing-tips-to-loss-weight-without-gym-and-dieting-92643907.jpg' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-9 .part-1::before {
-    background: url("/static/images/beauty-therapies-500x500.jpg") no-repeat center;
+    background: url("{% static 'images/beauty-therapies-500x500.jpg' %}") no-repeat center;
     background-size: cover;
 		transition: all 0.3s;
 }
 
 .section-products #product-10 .part-1::before {
-    background: url("/static/images/PilesAyurveda.png") no-repeat center;
+    background: url("{% static 'images/PilesAyurveda.png' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-11 .part-1::before {
-    background: url("/static/images/hairfall-1024x517.jpg") no-repeat center;
+    background: url("{% static 'images/hairfall-1024x517.jpg' %}") no-repeat center;
     background-size: cover;
 }
 
 .section-products #product-12 .part-1::before {
-    background: url("/static/images/how-to-lose-weight-in-month-ayurveda-doctor-shared-6-amazing-tips-to-loss-weight-without-gym-and-dieting-92643907.jpg") no-repeat center;
+    background: url("{% static 'images/how-to-lose-weight-in-month-ayurveda-doctor-shared-6-amazing-tips-to-loss-weight-without-gym-and-dieting-92643907.jpg' %}") no-repeat center;
     background-size: cover;
 }
 
@@ -865,6 +869,36 @@ section .card .image img{
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <script>
+
+const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
+
+    /*===== MENU SHOW =====*/
+    /* Validate if constant exists */
+    if(navToggle){
+        navToggle.addEventListener('click', () =>{
+            navMenu.classList.add('show-menu')
+        })
+    }
+        
+    /*===== MENU HIDDEN =====*/
+    /* Validate if constant exists */
+    if(navClose){
+        navClose.addEventListener('click', () =>{
+            navMenu.classList.remove('show-menu')
+        })
+    }
+
+    /*=============== REMOVE MENU MOBILE ===============*/
+    const navLink = document.querySelectorAll('.nav__link')
+
+    function linkAction(){
+        const navMenu = document.getElementById('nav-menu')
+        // When we click on each nav__link, we remove the show-menu class
+        navMenu.classList.remove('show-menu')
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction))
   //Scroll Reveal//
 
   const sr  = ScrollReveal({

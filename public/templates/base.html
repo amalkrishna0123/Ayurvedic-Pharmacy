@@ -20,7 +20,7 @@
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo">
-                    <img src="{% static 'images/nav-logo-img.png' %}" alt="">
+                    <img src="{% static 'images/logoori.png' %}" alt="">
                 </a>
 
                 <div class="nav__menu" id="nav-menu">
@@ -55,9 +55,9 @@
                 <div class="nav__btns">
                     <!-- Theme change button -->
                     {% if user.is_authenticated %}
-                    <a href="{% url 'Logout' %}" class=" change-theme" style="color: green;">Logout</a>
+                    <a href="{% url 'Logout' %}" class=" change-theme Login" style="color: green;">Logout</a>
                     {% else %}
-                    <a href="{% url 'Login' %}" class=" change-theme" style="color: green;">Login</a>
+                    <a href="{% url 'Login' %}" class=" change-theme Login" style="color: green;">Login</a>
                     {% endif %}
 
                     <div class="nav__toggle" id="nav-toggle">
@@ -75,7 +75,7 @@
 
                     <div class="home__data">
                         <h1 class="home__title"></h1>
-                        <p class="home__description ">
+                        <p class="home__description " style="opacity: 1;">
                             The path pf surrender doesn't mean inaction. Take action from there, claim inner peace.Be safe be the light.
                         </p>
                         <!-- <a href="#about" class="button button--flex">
@@ -190,52 +190,56 @@
                     <article class="product__card" style="border-radius: 50%;">
                         <!-- <div class="product__circle"></div> -->
 
-                        <img src="{% static 'images/AdobeStock_309283401-1024x683.jpeg' %}" alt="" class="product__img" style="border-radius: 50%;">
+                        <img src="{% static 'images/AdobeStock_309283401-1024x683.jpeg' %}" alt="" class="product__img" style="border-radius: 50%;object-fit: cover;width: 100%;height: 100%;">
 
-                        <h3 class="product__title">Cacti Plant</h3>
+                        <h3 class="product__title">Non-Speech</h3>
                         <!-- <span class="product__price">$19.99</span> -->
 
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            Book
+                            <!-- <i class="ri-shopping-bag-line"></i> -->
                         </button>
                     </article>
 
                     <article class="product__card">
                         <!-- <div class="product__circle"></div> -->
 
-                        <img src="{% static 'images/neck-pain-840x594.jpg' %}" alt="" class="product__img" style="border-radius: 50%;">
+                        <img src="{% static 'images/neck-pain-840x594.jpg' %}" alt="" class="product__img" style="border-radius: 50%;object-fit: cover;width: 100%;height: 100%;">
 
-                        <h3 class="product__title">Cactus Plant</h3>
+                        <h3 class="product__title">Spondylitis</h3>
                         <!-- <span class="product__price">$11.99</span> -->
 
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            Book
+                            <!-- <i class="ri-shopping-bag-line"></i> -->
                         </button>
                     </article>
 
                     <article class="product__card">
                         <!-- <div class="product__circle"></div> -->
 
-                        <img src="{% static 'images/Female-Infertility-Bandhyatva.jpg' %}" alt="" class="product__img" style="border-radius: 50%;">
+                        <img src="{% static 'images/Female-Infertility-Bandhyatva.jpg' %}" alt="" class="product__img" style="border-radius: 50%;object-fit: cover;width: 100%;height: 100%;">
 
-                        <h3 class="product__title">Aloe Vera Plant</h3>
+                        <h3 class="product__title">Sex Problems</h3>
                         <!-- <span class="product__price">$7.99</span> -->
 
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            Book
+                            <!-- <i class="ri-shopping-bag-line"></i> -->
                         </button>
                     </article>
 
                     <article class="product__card">
                         <!-- <div class="product__circle"></div> -->
 
-                        <img src="{% static 'images/hairfall-1024x517.jpg' %}" alt="" class="product__img" style="border-radius: 50%;">
+                        <img src="{% static 'images/hairfall-1024x517.jpg' %}" alt="" class="product__img" style="border-radius: 50%;object-fit: cover;width: 100%;height: 100%;">
 
-                        <h3 class="product__title">Succulent Plant</h3>
+                        <h3 class="product__title">Hairfall</h3>
                         <!-- <span class="product__price">$5.99</span> -->
 
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            Book
+                            <!-- <i class="ri-shopping-bag-line"></i> -->
                         </button>
                     </article>
 
@@ -244,11 +248,12 @@
 
                         <img src="{% static 'images/PilesAyurveda.png' %}" alt="" class="product__img" style="border-radius: 50%;">
 
-                        <h3 class="product__title">Succulent Plant</h3>
+                        <h3 class="product__title">Piles</h3>
                         <!-- <span class="product__price">$10.99</span> -->
 
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            Book
+                            <!-- <i class="ri-shopping-bag-line"></i> -->
                         </button>
                     </article>
 
@@ -257,11 +262,11 @@
 
                         <img src="{% static 'images/migraine.png' %}" alt="" class="product__img" style="border-radius: 50%;">
 
-                        <h3 class="product__title">Green Plant</h3>
+                        <h3 class="product__title">Migraine</h3>
                         <!-- <span class="product__price">$8.99</span> -->
 
-                        <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                        <button class="button--flex product__button">Book
+                            <!-- <i class="ri-shopping-bag-line"></i> -->
                         </button>
                     </article>
                 </div>
@@ -438,11 +443,11 @@
             <div class="footer__container container grid">
                 <div class="footer__content">
                     <a href="#" class="footer__logo">
-                        <img src="{% static 'images/nav-logo-img.png' %}" alt="" class="footer__logo-icon">
+                        <img src="{% static 'images/logoori.png' %}" alt="" class="footer__logo-icon">
                     </a>
 
                     <h3 class="footer__title">
-                        Subscribe to our newsletter <br> to stay update
+                        Treatments Always Yield Side Benefits, <br> Not Side Effects.
                     </h3>
 
                     <!-- <div class="footer__subscribe">
@@ -472,22 +477,22 @@
                         <li class="footer__information">+91 7907483052</li>
                         
                         <div class="footer__social">
-                            <a href="https://www.facebook.com/" class="footer__social-link">
-                                <i class="ri-facebook-fill"></i>
+                            <a href="https://wa.me/qr/YVGUPLEIMIP5L1" class="footer__social-link">
+                                <i class="ri-whatsapp-fill"></i>
                             </a>
-                            <a href="https://www.instagram.com/" class="footer__social-link">
+                            <a href="https://instagram.com/tk_aayurvedic_pharmacy?igshid=ZGUzMzM3NWJiOQ==" class="footer__social-link">
                                 <i class="ri-instagram-line"></i>
                             </a>
-                            <a href="https://twitter.com/" class="footer__social-link">
+                            <!-- <a href="https://twitter.com/" class="footer__social-link">
                                 <i class="ri-twitter-fill"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </ul>
                 </div>
 
                 <div class="footer__content">
                     <h3 class="footer__title">
-                        We accept all credit cards
+                        Time-Tested Remedies for Modern Living.
                     </h3>
 
                     <div class="footer__cards">
