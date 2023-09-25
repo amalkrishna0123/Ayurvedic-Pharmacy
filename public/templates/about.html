@@ -10,9 +10,27 @@
     font-family:'Poppins',sans-serif;
 }
 body{
-    background:repeat url(/static/images/5660740.jpg);
-    background-size: cover;
+    /* background:repeat url(/static/images/5660740.jpg);
+    background-size: cover; */
     /* margin: 3.5rem 0 0 0; */
+}
+.header{
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: aqua;
+}
+.container > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.header .container{
+    margin: 0;
+    max-width: 320px;
+    overflow: hidden;
+    width: 100%;
 }
 ul{
     list-style: none;
@@ -29,14 +47,15 @@ video{
     height: auto;
 }
 .About__Container{
-    max-width: 968px;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    
+    /* margin-left: var(--mb-1-5); */
+    /* margin-right: var(--mb-1-5); */
 }
 .main__container{
-    padding: 3.5rem 0 2rem;
+    /* padding: 3.5rem 0 2rem; */
+    margin-left:0;
+    margin: 13%;
     position: relative;
-    margin-top: 0px;
 }
 .main__container-title{
     text-align: center;
@@ -47,30 +66,30 @@ video{
 }
 .container__box1{
     position: absolute;
-    width: 200px;
+    width: 170px;
     height: auto;
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: -10px;
 }
 .container__box1 img{
     border-radius: 10px;
 }
 .container__box__2{
     position: absolute;
-    width: 100px;
+    width: 80px;
     background: rgba(255, 255, 255, .8);
     backdrop-filter: blur;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
-    margin-left: 200px;
+    height: 80px;
+    margin-left: 130px;
     margin-top: 30px;
-    height: 100px;
 }
 .container__box__2 .box__title{
     font-size: .75rem;
     text-align: center;
-    margin-top: 19px;
+    margin-top: 10px;
     color: rgb(24, 85, 0);
     /* -webkit-text-stroke: .1px gold ; */
 }
@@ -78,6 +97,7 @@ video{
     text-align: center;
     font-size: 8px;
     margin-top: 5px;
+    line-height: 10px;
 }
 .History_Background{
     position: relative;
@@ -93,20 +113,20 @@ video{
     border-radius: 20px;
     margin-top: 100px;
 } */
-.Background_img{
+/* .Background_img{
     position: absolute;
     margin-top: 10px;
     mix-blend-mode: overlay;
     width: 320px;
-}
-.Background_img img{
+} */
+/* .Background_img img{
     width: 320px;
     height: 1130px;
     border-radius: 20px;
     margin-top: -140px;
     margin-left: -13px;
     box-shadow: 2px 2px 2px black;
-}
+} */
 .History_Background .Background_Title{
     margin-top: -100px;
     text-align: center;
@@ -114,11 +134,11 @@ video{
     font-weight: 750;
     color: rgb(24, 85, 0);
     /* -webkit-text-stroke: .6px gold ; */
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 .History_Background .Background_Profile{
     position: absolute;
-    width: 120px;
+    width: 110px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -136,15 +156,15 @@ video{
     position: absolute;
     text-align: center;
     color:darkgreen;
-    margin-left: -3px;
-    width: 300px;
+    /* margin-left: -3px; */
+    width: 290px;
 } 
 .Background_Description .Description_Content{
     font-size: .7rem;    
 }
 
 .Background_Profille-Name{
-    margin-left: 150px;
+    margin-left: 135px;
     width: 100%;
     margin-top: -120px;
     font-size: 10px;
@@ -155,7 +175,7 @@ video{
 }
 .Name__Profession1{
     font-size: 10px;
-    margin-left: 150px;
+    margin-left: 135px;
     margin-top: 7px;
     width: 100%;
 }
@@ -185,12 +205,14 @@ video{
     /* -webkit-text-stroke: .3px gold ; */
 }
 .history{
-    margin-top: 1030px;
+    margin-top: 1230px;
     background-color: rgba(2, 137, 4, 0.771);
     border-radius: 10px;
     height: 260px;
-    width: 320px;
-    margin-left: -10px;
+    width: 290px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .history .history__title{
     text-align: center;
@@ -200,7 +222,7 @@ video{
 .history__title{
     position: absolute;
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 .history .history__description{
     text-align: center;
@@ -214,21 +236,19 @@ video{
     position: relative;
     height: 200px;
     margin-top: 20px;
-    width:320px;
-    margin-left: -10px;
+    width:290px;
 }
 .background__video .video-bg{
     object-fit: cover;
     object-position: center;
-    width:320px;
+    width:290px;
     border-radius: 10px;
 }
 .about__shop{
     background-color: rgba(2, 137, 4, 0.771);
     border-radius: 10px;
     height: 360px;
-    width: 320px;
-    margin-left: -10px;
+    width: 290px;
 }
 .treatment__title{
     text-align: center;
@@ -256,29 +276,29 @@ video{
 }
 .main__container2 .container__box3{
     position: absolute;
-    width: 200px;
+    width: 170px;
     border-radius: 10px;
-    margin-left: 108px;
+    margin-left: 120px;
 }
 .main__container2 .container__box3 img{
-    width: 200px;
+    width: 170px;
     border-radius: 10px;
 }
 .main__container2 .container__box__4{
     position: absolute;
-    width: 100px;
-    height:100px;
+    width: 80px;
+    height:80px;
     background: rgba(255, 255, 255, .8);
     backdrop-filter: blur;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-top: 20px;
 }
 .main__container2 .container__box__4 .box__title{
     font-size: .75rem;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     color: rgb(19, 61, 0);
     /* -webkit-text-stroke: .1px gold ; */
 }
@@ -286,6 +306,7 @@ video{
     text-align: center;
     font-size: 8px;
     margin-top: 5px;
+    line-height: 10px;
 }
 .about__contact-us{
     margin-top: 150px;
@@ -375,35 +396,46 @@ video{
   /* Button End */
 
 @media screen and (min-width: 375px){
+    .conteiner{
+        margin: 0;
+        overflow: hidden;
+    }
+    .header .container{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 365px;
+        overflow: hidden;
+        width: 100%;
+    }
     .main__container-title{
         font-size: 1.3rem;
     }
-    .Background{
+    /* .Background{
         object-fit: cover;
         overflow: hidden;  
         object-position: center;
         opacity: .3;
         height: 1550px;
         width: 375px;
-    }
+    } */
     .container__box1{
         position: absolute;
-        width: 230px;
+        width: 220px;
         height: auto;
         border-radius: 10px;
         margin-top: 10px;
-        margin-left:25px;
+        margin-left:-10px;
     }
     .container__box__2{
         position: absolute;
-        width: 130px;
+        width: 110px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 210px;
-        margin-top: 30px;
-        height: 110px;
+        margin-left: 180px;
+        margin-top: 50px;
+        height: 90px;
     }
     .container__box__2 .box__title{
         font-size: 13px;
@@ -415,85 +447,83 @@ video{
     }
     .History_Background{
         position: relative;
-        margin-top: -120px;
+        margin-top: 0px;
     }
     .Background_Title{
         font-size: 1.8rem;
     }
     .Background_img{
         position: absolute;
-        margin-top: -1500px;
+        margin-top: 0px;
         mix-blend-mode: overlay;
         margin-left: 0px;
-        width: 370px;
+        /* width: 370px; */
     }
-    .Background_img img{
+    /* .Background_img img{
         width: 370px;
         height: 1270px;
         border-radius: 20px;
         margin-top: 180px;
-    }
+    } */
     .History_Background .Background_Title{
-        margin-top: -1290px;
+        margin-top: 0px;
         text-align: center;
         font-size: 1.5rem;
         font-weight: 750;
         color: rgb(24, 85, 0);
         /* -webkit-text-stroke: .6px gold ; */
-        margin-left: 20px;
+        /* margin-left: 20px; */
     }   
     .History_Background .Background_Profile{
         position: absolute;
         width: 120px;
         margin-top: 20px;
-        margin-left: 30px;
+        margin-left: 40px;
     }
     .History_Background .Background_Description{
         margin-top: 170px;
         position: absolute;
         text-align: center;
         color:darkgreen;
-        margin-left: -5px;
-        width: 360px;
+        /* margin-left: -5px; */
+        width: 340px;
     } 
     .Background_Description .Description_Content{
         font-size: .8rem;    
         line-height: 18px;
     }
     .history{
-        margin-top: 1180px;
-        margin-left: -10px;
-        width: 370px;
+        margin-top: 1210px;
+        width: 345px;
     }
     .history__title{
-        margin-left: 70px;
+        margin-left: 40px;
     }
     .history .history__description{
         text-align: center;
-        width: 360px;
+        width: 330px;
         margin-left: 5px;
     }
     .background__video{
         position: relative;
         height: 200px;
         margin-top: 20px;
-        width:370px;
-        margin-left: -10px;
+        width:345px;
     }
     .background__video .video-bg{
         object-fit: cover;
         object-position: center;
-        width:375px;
+        width:345px;
         border-radius: 10px;
     }
     .about__shop{
         background-color: rgba(2, 137, 4, 0.771);
         border-radius: 10px;
         margin-top: 20px;
-        width: 370px;
+        width: 345px;
     }
     .treatment__title{
-        margin-left: 120px;
+        margin-left: 100px;
     }
     .treatment__list{
         margin-left: 0px;
@@ -504,24 +534,24 @@ video{
     }
     .main__container2 .container__box3{
         position: absolute;
-        width: 230px;
+        width: 220px;
         border-radius: 10px;
-        margin-left: 108px;
+        margin-left: 120px;
     }
     .main__container2 .container__box3 img{
-        width: 230px;
+        width: 220px;
         border-radius: 10px;
     }
     .main__container2 .container__box__4{
         position: absolute;
-        width: 130px;
-        height:110px;
+        width: 110px;
+        height:90px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 20px;
-        margin-top: 20px;
+        margin-left: 40px;
+        margin-top: 30px;
     }
     .about__contact-us{
         margin-top: 170px;
@@ -532,53 +562,50 @@ video{
 }
 
 @media screen and (min-width: 425px){
-    .Background{
-        object-fit: cover;
-        overflow: hidden;  
-        object-position: center;
-        opacity: .3;
-        height: 1550px;
-        width: 425px;
+    .header .container{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 400px;
+        overflow: hidden;
+        width: 100%;
+    }
+    .container{
+        overflow: hidden;
+        margin: 0 auto;
     }
     .container__box1{
         position: absolute;
-        width: 270px;
+        width: 250px;
         height: auto;
         border-radius: 10px;
         margin-top: 10px;
-        margin-left: 25px;
+        margin-left: -20px;
     }
     .container__box__2{
         position: absolute;
-        width: 140px;
+        width: 120px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 240px;
-        margin-top: 40px;
-        height: 120px;
+        margin-left: 210px;
+        margin-top: 50px;
+        height: 100px;
     }
     .History_Background{
         position: relative;
-        margin-top: 140px;
+        margin-top: 0px;
     }
     .Background_img{
         position: absolute;
-        margin-top: -1550px;
+        margin-top: 0px;
         mix-blend-mode: overlay;
         margin-left: 0px;
         width: 420px;
     }
-    .Background_img img{
-        width: 420px;
-        height: 1390px;
-        border-radius: 20px;
-        margin-top: -10px;
-    }
     
     .History_Background .Background_Title{
-        margin-top: -1500px;
+        margin-top: 0px;
         text-align: center;
         font-size: 1.5rem;
         font-weight: 750;
@@ -590,15 +617,15 @@ video{
         position: absolute;
         width: 120px;
         margin-top: 20px;
-        margin-left: 50px;
+        margin-left: 80px;
     }  
     .History_Background .Background_Description{
         margin-top: 170px;
         position: absolute;
         text-align: center;
         color:darkgreen;
-        margin-left: 3px;
-        width: 390px;
+        width: 400px;
+        margin-left: 15px;
     } 
     .Background_Description .Description_Content{
         font-size: .8rem;    
@@ -616,35 +643,39 @@ video{
         border-radius: 10px;
     }
     .history{
-        margin-top: 1270px;
-        width: 420px;
-        margin-left: -12px;
+        margin-top: 1230px;
+        width: 410px;
+        margin-left: 7px;
+    }
+    .history .history__title{
+        margin-left: 70px;
     }
     .history .history__description{
         text-align: center;
-        width: 410px;
+        width: 390px;
         font-size: 13px;
         line-height: 20px;
+        margin-left: 10px;
     }
     .background__video{
         position: relative;
         height: 200px;
         margin-top: 20px;
-        width:425px;
-        margin-left: -12px;
+        width:410px;
+        margin-left: 7px;
     }
     .background__video .video-bg{
         object-fit: cover;
         object-position: center;
-        width:425px;
+        width:410px;
         border-radius: 10px;
     }
     .about__shop{
         background-color: rgba(2, 137, 4, 0.771);
         border-radius: 10px;
         margin-top: 40px;
-        width: 420px;
-        margin-left: -12px;
+        width: 410px;
+        margin-left: 7px;
     }
     .treatment__title{
         text-align: center;
@@ -661,7 +692,9 @@ video{
         position: absolute;
         margin-top: 60px;
         color: white;
-        margin-left: 15px;
+        margin-left: 0px;
+        width: 390px;
+        margin-left: 10px;
     }
     .main__container2{
         margin-top: 30px;
@@ -669,31 +702,31 @@ video{
     }
     .main__container2 .container__box3{
         position: absolute;
-        width: 270px;
+        width: 250px;
         border-radius: 10px;
-        margin-left: 120px;
+        margin-left: 150px;
     }
     .main__container2 .container__box3 img{
-        width: 270px;
+        width: 250px;
         border-radius: 10px;
     }
     .main__container2 .container__box__4{
         position: absolute;
-        width: 140px;
-        height:120px;
+        width: 120px;
+        height:100px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 20px;
-        margin-top: 33px;
+        margin-left: 50px;
+        margin-top: 45px;
     }
     .about__contact-us{
         margin-top: 210px;
-        color: aliceblue;
+        color:darkgreen;
     }
     .about__contact-us .loader{
-        margin-left:170px ;
+        margin-left:200px ;
         height: 30px;
         margin-top: 10px;
     }
@@ -706,9 +739,145 @@ video{
         font-size: 1.8rem;
     }
 }
+@media (min-width: 450px){
+    .container{
+        max-width: 450px;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .header{
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .header .container{
+        max-width: 450px;
+        width: 100%;
+    }
+    .container__box1{
+        margin-left: 10px;
+    }
+    .History_Background .Background_Profile{
+        margin-left: 110px;
+    }
+    .History_Background .Background_Description{
+        margin-top: 170px;
+        position: absolute;
+        text-align: center;
+        color:darkgreen;
+        width: 400px;
+        margin-left: 25px;
+    } 
+    .history{
+        margin-left: 20px;
+    }
+    .background__video{
+        margin-left: 20px;
+    }
+    .about__shop{
+        margin-left: 20px;
+    }
+}
+@media (min-width: 495px){
+    .container{
+        overflow: hidden;
+        margin: 0 auto;
+        max-width: 475px;
+        width: 100%;
+    }
+    .header{
+       margin: 0 auto;
+       width: 100%;
+    }
+    .header .container{
+        max-width: 475px;
+        width: 100%;
+    }
+    .History_Background{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .History_Background .Background_Description{
+        margin-left: 35px;
+    }
+    .history{
+        margin-top: 1230px;
+        margin-left: 30px;
+    }
+    .background__video{
+        margin-left: 30px;
+    }
+    .about__shop{
+        margin-left: 30px;
+    }
+    .about__contact-us .loader{
+        text-align: center;
+        margin-left: 0;
+    }
+}
+@media (min-width:550px){
+    .container{
+        margin: 0 auto;
+        max-width: 480px;
+        width: 100%;
+    }
+    .header{
+        left: 0;
+        top: 0;
+    }
+    .history{
+        margin-top: 1230px;
+    }
+
+}
+@media (min-width : 600px){
+    .container{
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+    }
+    .header{
+        width: 100%;
+    }
+    .header .container{
+        width: 100%;
+        max-width: 600px;
+    }
+    .History_Background{
+        justify-content: center;
+        text-align: center;
+    }
+    .History_Background .Background_Description{
+        justify-content: center;
+        /* align-items: center; */
+        width: 500px;
+    }
+    .History_Background .Background_Profile{
+        margin-left: 170px;
+    }
+    .history{
+        margin-left: 90px;
+    }
+    .background__video{
+        margin-left: 90px;
+    }
+    .about__shop{
+        margin-left: 90px;
+    }
+    .treatment__list{
+        width: 380px;
+    }
+}
 @media screen and (min-width: 768px){
+    .header .container{
+        margin: 0 auto;
+        max-width: 768px;
+        width: 100%;
+    }
     .main__container{
-        margin-top: 70px;
+        margin-top: 130px;
     }
     .main__container-title{
         font-size: 2rem;
@@ -723,26 +892,34 @@ video{
     }
     .container__box1{
         position: absolute;
-        width: 400px;
+        width: 370px;
         height: auto;
         border-radius: 10px;
         margin-top: 20px;
-        margin-left: 110px;
+        margin-left: -20px;
     }
     .container__box__2{
         position: absolute;
-        width:190px;
+        width:170px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 430px;
+        margin-left: 280px;
         margin-top: 100px;
-        height: 150px;
+        height: 130px;
+    }
+    .container__box__2 .box__title{
+        font-size:17px ;
+        margin-top: 20px;
+    }
+    .container__box__2 .box__description{
+        font-size: 11px;
+        line-height: 16px;
     }
     .History_Background{
         position: relative;
-        margin-top: 240px;
+        margin-top: 200px;
     }
     .History_Background .Background_Title{
         margin-top: -1460px;
@@ -802,22 +979,22 @@ video{
         position: absolute;
         width: 160px;
         margin-top: 140px;
-        margin-left: 180px;
+        margin-left: 110px;
     }
     .history{
-        margin-top: 1195px;
-        width: 650px;
-        margin-left: 30px;
+        margin-top: 1200px;
+        width: 550px;
+        margin-left: 25px;
     }
     .history .history__title{
-        margin-left: 170px;
+        margin-left: 100px;
         margin-top: 25px;
         font-size: 2rem;
     }
     .history .history__description{
         text-align: center;
-        width: 630px;
-        margin-left: 10px;
+        width: 540px;
+        margin-left: 5px;
         font-size: 14px;
         line-height: 18px;
         margin-top: 80px;
@@ -826,8 +1003,8 @@ video{
         position: relative;
         height: 200px;
         margin-top: 20px;
-        width:650px;
-        margin-left: 30px;
+        width:550px;
+        margin-left: 25px;
     }
     .background__video .video-bg{
         object-fit: cover;
@@ -838,20 +1015,21 @@ video{
     .about__shop{
         background-color: rgba(2, 137, 4, 0.771);
         border-radius: 10px;
-        margin-top: 170px;
-        width: 650px;
-        margin-left: 30px;
+        margin-top: 110px;
+        width: 550px;
+        margin-left: 25px;
     }
     .treatment__title{
         font-size: 2rem;
-        margin-left: 240px;
+        margin-left: 180px;
         color: rgb(209, 208, 208);
     }
     .treatment__list{
         font-size: 14px;
         color: white;
-        margin-left: 115px;
+        margin-left: 25px;
         margin-top: 60px;
+        width: 490px;
     }
     .main__container2{
         margin-top: 30px;
@@ -860,40 +1038,48 @@ video{
     }
     .main__container2 .container__box3{
         position: absolute;
-        width: 400px;
+        width: 370px;
         border-radius: 10px;
-        margin-left: 108px;
+        margin-left: 80px;
     }
     .main__container2 .container__box3 img{
-        width: 400px;
+        width: 370px;
         border-radius: 10px;
     }
     .main__container2 .container__box__4{
         position: absolute;
-        width: 190px;
-        height:150px;
+        width: 170px;
+        height:130px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 20px;
+        margin-left: -20px;
         margin-top: 85px;
+    }
+    .main__container2 .container__box__4 .box__title{
+        font-size: 17px;
+        margin-top: 20px;
+    }
+    .main__container2 .container__box__4 .box__description{
+        font-size: 11px;
+        line-height: 16px;
     }
     .about__contact-us{
         margin-top: 370px;
         font-size: 18px;
     }
     .about__contact-us .loader{
-        margin-left:350px ;
         margin-top: 20px;
+        text-align: center;
     }
     .History_Background .Background_Description{
         margin-top: 220px;
         position: absolute;
         text-align: center;
         color:darkgreen;
-        width: 630px;
-        margin-left: 40px;
+        width: 555px;
+        margin-left: 25px;
     } 
     .Background_Description .Description_Content{
         font-size: .87rem;    
@@ -910,6 +1096,15 @@ video{
     }
 }
 @media screen and (min-width: 1024px){
+    .container{
+        max-width: 900px;
+        width: 100%;
+    }
+    .header .container{
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 100%;
+    }
     .Background{
         object-fit: cover;
         overflow: hidden;  
@@ -923,29 +1118,29 @@ video{
     }
     .container__box1{
         position: absolute;
-        width: 500px;
+        width: 470px;
         height: auto;
         border-radius: 15px;
         margin-top: 10px;
-        margin-left: 150px;
+        margin-left: -10px;
     }
     .container__box1 img{
         border-radius: 15px;
     } 
     .container__box__2{
         position: absolute;
-        width: 200px;
+        width: 180px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 570px;
+        margin-left: 420px;
         margin-top: 120px;
-        height: 170px;
+        height: 150px;
     }
     .History_Background{
         position: relative;
-        margin-top: 350px;
+        margin-top: 300px;
     }
     .Background_Description-Certificate{
         width: 300px;
@@ -959,7 +1154,8 @@ video{
         border-radius: 10px;
     }
     .history{
-        margin-top: 1450px;
+        margin-top: 1300px;
+        margin-left: 160px;
     }
     .history .history__description{
         text-align: center;
@@ -968,18 +1164,18 @@ video{
         position: relative;
         height: 200px;
         margin-top: 20px;
-        width:425px;
+        margin-left: 160px;
     }
     .background__video .video-bg{
         object-fit: cover;
         object-position: center;
-        width:425px;
         border-radius: 10px;
     }
     .about__shop{
         background-color: rgba(2, 137, 4, 0.771);
         border-radius: 10px;
-        margin-top: 40px;
+        margin-top: 110px;
+        margin-left: 160px;
     }
     .main__container2{
         margin-top: 20px;
@@ -987,30 +1183,31 @@ video{
     }
     .main__container2 .container__box3{
         position: absolute;
-        width: 230px;
+        width: 470px;
         border-radius: 10px;
-        margin-left: 108px;
+        margin-left: 190px;
     }
     .main__container2 .container__box3 img{
-        width: 230px;
+        width: 470px;
         border-radius: 10px;
     }
     .main__container2 .container__box__4{
         position: absolute;
-        width: 130px;
-        height:110px;
+        width: 170px;
+        height:150px;
         background: rgba(255, 255, 255, .8);
         backdrop-filter: blur;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 10px;
-        margin-left: 20px;
-        margin-top: 20px;
+        margin-left: 50px;
+        margin-top: 120px;
     }
     .about__contact-us{
-        margin-top: 170px;
+        margin-top: 350px;
     }
     .about__contact-us .loader{
-        margin-left:150px ;
+        text-align: center;
+        margin-left: 0px ;
     }
     .Background_Description-Title{
         margin-top: -20px;
@@ -1049,263 +1246,198 @@ video{
         text-align: center;
         color:darkgreen;
         width: 680px;
-        margin-left: 140px;
+        margin-left: 80px;
     } 
     .Background_Description .Description_Content{
         font-size: 16.5px;    
         line-height: 22px;
     }
 }
-@media screen and (min-width: 1440px){
-    .Background{
-        object-fit: cover;
-        overflow: hidden;  
-        object-position: center;
-        opacity: .3;
-        height: 1550px;
-        width: 1024px;
+@media (min-width:1200px){
+    .container{
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
     }
-    .main__container-title{
-        font-size: 2.8rem;
-        margin-left: 600px;
+    .main__container{
+        margin-top: 15%;
     }
     .container__box1{
-        position: absolute;
-        width: 600px;
+        width: 500px;
         height: auto;
-        border-radius: 15px;
-        margin-top: 50px;
-        margin-left: 280px;
+        margin-left: 30px;
     }
-    .container__box1 img{
-        border-radius: 15px;
-    } 
     .container__box__2{
-        position: absolute;
-        width: 320px;
-        background: rgba(255, 255, 255, .8);
-        backdrop-filter: blur;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        border-radius: 10px;
-        margin-left: 800px;
-        margin-top: 120px;
-        height: 280px;
-    }
-    .History_Background{
-        position: relative;
-        margin-top: 350px;
+        width: 220px;
+        height: 170px;
+        margin-left: 450px;
     }
     .History_Background .Background_Title{
-        margin-top: -1500px;
-        text-align: center;
         font-size: 3rem;
-        font-weight: 790;
-        margin-left: 430px;
     }
-    .Background_img{
-        position: absolute;
-        margin-top: -1750px;
-        mix-blend-mode: overlay;
-        width: 1000px;
+    .History_Background .Background_Profile{
+        width: 200px;
+        margin-left: 200px;
     }
-    .Background_img img{
-        width: 850px;
-        height: 1700px;
-        border-radius: 20px;
-        margin-top: 180px;
+    .History_Background .Background_Profille-Name{
+        font-size: 16px;
         margin-left: 280px;
+        margin-top: -180px;
+    }
+    .History_Background .Name__Profession{
+        font-size: 14px;
+    }
+    .History_Background .Name__Profession1{
+        font-size: 14px;
+        margin-left: 280px;
+    }
+    .History_Background .Description_Content{
+        width: 850px;
+        font-size: 17px;
+        line-height: 27px;
+        margin-top: 50px;
+        margin-left: -20px;
+    }
+    .Background_Description-Title{
+        font-size: 3rem;
+        margin-left: 95px;
     }
     .Background_Description-Certificate{
         width: 450px;
-        margin-top: 10px;
+        margin-top: 20px;
         border-radius: 10px;
         height: auto;
+        margin-left: 90px;
+    }
+    .Background_Description-Title1{
+        font-size: 3rem;
+        margin-left: 95px;
+        margin-top: -650px;
     }
     .Background_Description-License{
         width: 380px;
         margin-top: 30px;
         border-radius: 10px;
-    }
-    .history{
-        margin-top: 1540px;
-        width: 850px;
-        margin-left: 280px;
-    }
-    .history .history__title{
-        font-size: 2.7rem;
-    }
-    .history .history__description{
-        text-align: center;
-        font-size: 18px;
-        width: 830px;
-        margin-top: 100px;
-        line-height: 24px;
-    }
-    .background__video{
-        position: relative;
-        height: 200px;
-        margin-top: 20px;
-        width:850px;
-        margin-left: 280px;
-    }
-    .background__video .video-bg{
-        object-fit: cover;
-        object-position: center;
-        width:850px;
-        border-radius: 10px;
-    }
-    .about__shop{
-        background-color: rgba(2, 137, 4, 0.771);
-        border-radius: 10px;
-        margin-top: 300px;
-        width: 850px;
-        margin-left: 280px;
-    }
-    .treatment__title{
-        font-size: 2.7rem;
-        margin-left: 280px;
-        color: rgb(209, 208, 208);
-    }
-    .treatment__list{
-        margin-top: 85px;
-        font-size: 18px;
-        line-height: 24px;
-        margin-left: 120px;
-    }
-    .main__container2{
-        margin-top: 20px;
-        position: relative;
-    }
-    .main__container2 .container__box3{
-        position: absolute;
-        width: 600px;
-        border-radius: 10px;
-        margin-left: 530px;
-        height: auto;
-    }
-    .main__container2 .container__box3 img{
-        width: 600px;
-        border-radius: 10px;
-        height: auto;
-    }
-    .main__container2 .container__box__4{
-        position: absolute;
-        width: 320px;
-        height:280px;
-        background: rgba(255, 255, 255, .8);
-        backdrop-filter: blur;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        border-radius: 10px;
-        margin-left: 280px;
-        margin-top: 60px;
-    }
-    .History_Background .Background_Profile{
-        position: absolute;
-        width: 190px;
-        margin-top: 140px;
-        margin-left: 450px;
-    }
-    
-    .Background_Profille-Name{
-        margin-left: 280px;
-        width: 100%;
-        margin-top: -150px;
-        font-size: 14.5px;
-    }
-    .Name__Profession{
-        display: block;
-        font-size: 12px;
-    }
-    .Name__Profession1{
-        font-size: 13px;
-        margin-left: 280px;
-        margin-top: 7px;
-        width: 100%;
-    }
-    .Name__Profession-span{
-        display: block;
-    }
-    .History_Background .Background_Description{
-        margin-top: 260px;
-        position: absolute;
-        text-align: center;
-        color:darkgreen;
-        width: 800px;
-        margin-left: 300px;
-    } 
-    .Background_Description .Description_Content{
-        font-size: 16.5px;    
-        line-height: 22px;
-    }
-    
-    .about__contact-us{
-        margin-top: 170px;
-    }
-    .about__contact-us .loader{
-        margin-left:150px ;
-    }
-    .Background_Description-Title{
-        margin-top: -20px;
-        font-size: 1.8rem;
-    }
-    .Background_Description-Title1{
-        margin-top: -630px;
-        font-size: 1.8rem;
-    } 
-    
-.container__box__2 .box__title{
-    font-size:25px;
-    text-align: center;
-    margin-top: 50px;
-    color: rgb(24, 85, 0);
-    /* -webkit-text-stroke: .1px gold ; */
-}
-.container__box__2 .box__description{
-    text-align: center;
-    font-size: 15px;
-    margin-top: 15px;
-}
-    .main__container2 .container__box__4 .box__title{
-        font-size:25px;
-        text-align: center;
-        margin-top: 60px;
-        color: rgb(19, 61, 0);
-        /* -webkit-text-stroke: .1px gold ; */
-    }
-    .main__container2 .container__box__4 .box__description{
-        text-align: center;
-        font-size: 15px;
-        margin-top: 15px;
-    }
-    .about__contact-us{
-        margin-top: 150px;
-    }
-    .about__contact-us .contact__us__des{
-        /* text-align: center; */
-        margin-top: 450px;
-        font-size: 22px;
-        margin-left: 440px;
-        font-weight: 600;
-    }
-    .about__contact-us .loader{
-        margin-left:620px;
-        margin-top: 30px;
-
-    }
-    .loader {
         margin-left: 90px;
     }
-    
-    .scanner a {
-        color: transparent;
-        font-size: 2rem;
-        font-weight: 600;
-        position: relative;
-        overflow: hidden;
+    .history{
+        margin-top: 1620px;
+        margin-left: 200px;
     }
+    .background__video{
+        margin-left: 200px;
+    }
+    .about__shop{
+        margin-left: 200px;
+    }
+    .main__container2 .container__box3{
+        width: 500px;
+        margin-left: 200px;
+    }
+    .main__container2 .container__box3 img{
+        width: 500px;
+    }
+    .main__container2 .container__box__4{
+        width: 220px;
+        height: 170px;
+    }
+    
+
+}
+@media screen and (min-width: 1440px){
+    .container{
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main__container{
+        margin-top: 15%;
+    }
+    .container__box1{
+        width: 500px;
+        height: auto;
+        margin-left: 30px;
+    }
+    .container__box__2{
+        width: 220px;
+        height: 170px;
+        margin-left: 450px;
+    }
+    .History_Background .Background_Title{
+        font-size: 3rem;
+    }
+    .History_Background .Background_Profile{
+        width: 200px;
+        margin-left: 200px;
+    }
+    .History_Background .Background_Profille-Name{
+        font-size: 16px;
+        margin-left: 280px;
+        margin-top: -180px;
+    }
+    .History_Background .Name__Profession{
+        font-size: 14px;
+    }
+    .History_Background .Name__Profession1{
+        font-size: 14px;
+        margin-left: 280px;
+    }
+    .History_Background .Description_Content{
+        width: 850px;
+        font-size: 17px;
+        line-height: 27px;
+        margin-top: 50px;
+        margin-left: -20px;
+    }
+    .Background_Description-Title{
+        font-size: 3rem;
+        margin-left: 95px;
+    }
+    .Background_Description-Certificate{
+        width: 450px;
+        margin-top: 20px;
+        border-radius: 10px;
+        height: auto;
+        margin-left: 90px;
+    }
+    .Background_Description-Title1{
+        font-size: 3rem;
+        margin-left: 95px;
+        margin-top: -650px;
+    }
+    .Background_Description-License{
+        width: 380px;
+        margin-top: 30px;
+        border-radius: 10px;
+        margin-left: 90px;
+    }
+    .history{
+        margin-top: 1620px;
+        margin-left: 200px;
+    }
+    .background__video{
+        margin-left: 200px;
+    }
+    .about__shop{
+        margin-left: 200px;
+    }
+    .main__container2 .container__box3{
+        width: 500px;
+        margin-left: 200px;
+    }
+    .main__container2 .container__box3 img{
+        width: 500px;
+    }
+    .main__container2 .container__box__4{
+        width: 220px;
+        height: 170px;
+    }
+    
+
 }
 
 </style>
+<div class="container" style="background: rgba(255, 0, 0, 0.244);">
     <div class="About__Container">
 
         <div class="main__container">
@@ -1324,10 +1456,9 @@ video{
         <!-- TK Ayurvedic -->
         <div class="History_Background">
           <video class="Background" playsinline autoplay muted loop>
-            <!-- <source src="/static/images/Dust particles background.mp4" type="video/mp4"> -->
           </video>
           <div class="Background_img">
-            <img src="/static/images/IMG_20230517_114459.jpg" alt="">
+            <!-- <img src="/static/images/IMG_20230517_114459.jpg" alt=""> -->
           </div>
           <h2 class="Background_Title">TK AYURVEDIC</h2>
           <div class="Background_Content">
@@ -1378,7 +1509,7 @@ video{
         <br><br><br>
         <!-- Ending -->
     
-        <div class="history">
+        <div class="history" style="text-align: center;">
           <h2 class="history__title">Vayanadan Ottamooli</h2>
           <p class="history__description">
             Treatment with local medicines<span class="history__description-name">(Nattu Marunnu)</span> is said to relieve sudden illness after taking medicine once or twice. Treatment can be done in two ways,traditional medicine treatment or ottamooli treatment. Every season we get a fever, cold, allergy, sore throat... All these diseases come suddenly to us. That means quick treatment for sudden diseases. And treatment of chronic diseases like psoriasis, eczema, various skin diseases, gout, gout, rheumatism, asthma, etc. That is, by taking medicine for a certain period of time, some lifestyle changes can be treated and cured  
@@ -1444,9 +1575,42 @@ video{
         </div>
     
       </div>
+    </div>
     
-      <script src="/template/scrollreveal.min.js"></script>
-      <script>
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+
+    const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
+
+    /*===== MENU SHOW =====*/
+    /* Validate if constant exists */
+    if(navToggle){
+        navToggle.addEventListener('click', () =>{
+            navMenu.classList.add('show-menu')
+        })
+    }
+        
+    /*===== MENU HIDDEN =====*/
+    /* Validate if constant exists */
+    if(navClose){
+        navClose.addEventListener('click', () =>{
+            navMenu.classList.remove('show-menu')
+        })
+    }
+
+    /*=============== REMOVE MENU MOBILE ===============*/
+    const navLink = document.querySelectorAll('.nav__link')
+
+    function linkAction(){
+        const navMenu = document.getElementById('nav-menu')
+        // When we click on each nav__link, we remove the show-menu class
+        navMenu.classList.remove('show-menu')
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction))
         //Scroll Reveal//
     
        const sr = ScrollReveal({

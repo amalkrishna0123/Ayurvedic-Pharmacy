@@ -15,9 +15,14 @@
         body {
         /* display: flex; */
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         min-height: 100vh;
-        background: #f9f9f9;
+    }
+    .container > * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
     }
     a{
         text-decoration: none;
@@ -26,12 +31,12 @@
         position: relative;
         width: 800px;
         height: 600px;
-        background: linear-gradient(90deg, #54880e, #f2f2f2);
-        border-radius: 20px;
+        /* background: linear-gradient(90deg, #54880e, #f2f2f2); */
+        /* border-radius: 20px; */
         box-shadow: 0 0 60px rgba(0, 0, 0, .3);
         padding: 60px;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         overflow: hidden;
         background:bottom  no-repeat url({% static 'images/IMG_20230514_125620.jpg' %});
         object-fit: cover;
@@ -110,11 +115,11 @@
     }
     .fa-instagram{
         animation: zoomIn 1s ease backwards,floatImage1 4s ease-in-out infinite;
-        animation-delay: 1s, 2s; 
+        animation-delay: 1s, 2s;
     }
     .fa-facebook{
         animation: zoomIn 1s ease backwards,floatImage2 4s ease-in-out infinite;
-        animation-delay: 1s, 2s; 
+        animation-delay: 1s, 2s;
     }
     button {
         width: 100%;
@@ -159,28 +164,39 @@
 
       /* For Small Devices */
       @media screen and (min-width: 320px){
-       .wrapper{
-        width: 300px;
-        height: 750px;
-        margin-top: 80px;
-       } 
+        .container{
+            overflow: hidden;
+        }
+       .container .wrapper{
+            width: 100%;
+            height: 790px;
+            margin-top: 0px;
+            margin: 0 auto;
+            margin-left: 0;
+            text-align: center;
+            border-radius: 20px;
+       }
        .form-wrapper{
-        /* background-color: aqua; */
-        margin-left: -49px;
+        /* max-width: 300px; */
+        /* margin: 0; */
+            margin-left:-90px ;
        }
        h2{
-        text-align: center;
+            text-align: center;
        }
-       .input-box {
-        width: 280px;
-        margin: 30px 0;
+       .contactInfo .contactInfo-h{
+            margin-left: 70px;
+       }
+       .wrapper .input-box {
+            width: 255px;
+            margin-left: 45px;
         }
         .contactInfo h2{
             margin-top: 50px;
         }
-        .contactInfo .info{
+        .wrapper .info{
             list-style: none;
-            margin-left: 30px;
+            margin-left: 70px;
             margin-top: 15px;
             line-height: 30px;
         }
@@ -192,8 +208,9 @@
         }
         .contactInfo .sci li a{
             color: #54880e;
-            padding: 20px;
+            padding-left: 20px;
             font-size: 2rem;
+            margin-left: 30px;
         }
         .contactInfo .sci li a .fa-instagram{
             color: rgb(255, 0, 119);
@@ -210,16 +227,25 @@
         .contactInfo  .info .fa-phone{
             color: #54880e;
         }
+        .wrapper .Button__Message{
+            width: 150px;
+            margin-left: 50px;
+        }
     }
     @media screen and (min-width: 375px){
-        .wrapper{
-        width: 360px;
-        height: 750px;
-        margin-left: 7px;
-       } 
+        .container{
+            overflow: hidden;
+        }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
        .form-wrapper{
         /* background-color: aqua; */
-        margin-left: -20px;
+        margin-left: -50px;
+       }
+       .wrapper .contactInfo{
+        margin-left: 15px;
        }
        .contactInfo h2{
             margin-top: 50px;
@@ -227,7 +253,7 @@
         }
         .contactInfo .info{
             list-style: none;
-            margin-left: 30px;
+            margin-left: 0px;
             margin-top: 15px;
             line-height: 30px;
         }
@@ -238,12 +264,13 @@
             list-style: none;
             display: flex;
             margin-top: 10px;
-            margin-left: 30px;
+            margin-left: 0px;
         }
         .contactInfo .sci li a{
             color: #54880e;
             padding: 20px;
             font-size: 2.1rem;
+            margin-left: 20px;
         }
         .ContactUs{
             font-size: 2.3rem;
@@ -253,13 +280,18 @@
 
     /* For Medium Devices */
     @media screen and (min-width: 425px){
-        .wrapper{
-            width: 400px;
-            height: 750px;
-            margin-left: 14px;
+        .container{
+            overflow: hidden;
         }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
         .form-wrapper{
             margin-left: -5px;
+        }
+        .wrapper .contactInfo{
+            margin-left: -28px;
         }
         .contactInfo .info{
             list-style: none;
@@ -281,37 +313,142 @@
             padding: 20px;
             font-size: 2.1rem;
         }
-        .ContactUs{
+        .wrapper .ContactUs{
             font-size: 2.3rem;
+            margin-left: -26px;
+        }
+        .wrapper .input-box{
+            width: 345px;
+            margin-left: -30px;
+        }
+        .wrapper .Button__Message{
+            width: 200px;
+            margin-left: -20px;
         }
     }
 
-    @media screen and (max-width:480px){
-        .wrapper{
-            width: 460px;
+    @media  (min-width:450px){
+        .container{
+            overflow: hidden;
+        }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
+        .contactInfo {
+            margin-left: 0px;
+        }
+        .contactInfo .contactInfo-h{
+            font-size: 2.5rem;
             margin-left: 10px;
         }
-        .contactInfo {
-            /* background-color: #54880e; */
-            margin-left: 30px;
+        .contactInfo .info{
+            margin-left: 15px;
         }
-        .ContactUs{
+        .wrapper .ContactUs{
             /* background-color: #54880e; */
-            margin-left: 40px;
+            margin-left: -10px;
+            font-size: 2.5rem;
         }
-        .input-box{
-            margin-left: 40px;
+        .wrapper .input-box{
+            margin-left: -20px;
         }
         .Button__Message{
             margin-left: 40px;
         }
     }
+    @media (min-width : 460px){
+        .container{
+            overflow: hidden;
+        }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
+       .contactInfo{
+        margin-left: 20px;
+       }
+       .contactInfo .contactInfo-h{
+        margin-left: 10px;
+       }
+       .contactInfo .sci li a{
+        margin-left: 30px;
+       }
+       .wrapper .input-box{
+        margin-left: -15px;
+       }
+       .wrapper .Button__Message{
+        margin-left: 5px;
+       }
+    }
+    @media (min-width:480px){
+        .container{
+            overflow: hidden;
+        }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
+       .contactInfo .contactInfo-h{
+            margin-left: 12px;
+       }
+       .wrapper .input-box{
+        margin-left: -7px;
+       }
+    }
+    @media (min-width : 500px){
+        .container{
+            overflow: hidden;
+        }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
+       .contactInfo .contactInfo-h{
+            margin-left: 35px;
+       }
+       .wrapper .info{
+        margin-left: 35px;
+       }
+       .wrapper .input-box{
+        margin-left: -7px;
+       }
+       .wrapper .input-box{
+        width: 400px;
+        margin-left: -20px;
+       }
+    }
+    @media (min-width : 550px){
+        .container{
+            overflow: hidden;
+        }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
+       .contactInfo .contactInfo-h{
+            margin-left: 55px;
+       }
+       .wrapper .info{
+        margin-left: 55px;
+       }
+       .wrapper .input-box{
+        width: 400px;
+        margin-left: 5px;
+       }
+       .contactInfo .sci li a{
+        margin-left: 50px;
+       }
+    }
 
     @media screen and (min-width: 768px){
-        .wrapper{
-        width:750px;
-        height: 750px;
-       } 
+        .container{
+            overflow: hidden;
+        }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
        .input-box {
         width: 350px;
         margin: 30px 0;
@@ -321,11 +458,13 @@
 
     /* For Large Devices */
     @media screen and (min-width: 1024px){
-        .wrapper{
-            width: 1000px;
-            height: 800px;
-            margin-top: 110px;
+        .container{
+            overflow: hidden;
         }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
         .contactInfo{
             margin-left: 300px;
         }
@@ -349,12 +488,13 @@
         }
     }
     @media screen and (min-width: 1440px){
-        .wrapper{
-            width: 1400px;
-            margin-top: 100px;
-            margin-left: 20px;
-            height: 800px;
+        .container{
+            overflow: hidden;
         }
+        .container .wrapper{
+            width: 100%;
+            height: 820px;
+       }
         .contactInfo{
             margin-left: 500px;
         }
@@ -391,11 +531,11 @@
     }
     50%{
         transform: translateX(-8px);
-        
+
     }
     100%{
         transform: translateY(0);
-        
+
     }
 }
 
@@ -406,11 +546,11 @@
     }
     50%{
         transform: translateY(4px);
-        
+
     }
     100%{
         transform: translateY(0);
-        
+
     }
 }
 
@@ -421,19 +561,19 @@
     }
     50%{
         transform: translateX(8px);
-        
+
     }
     100%{
         transform: translateY(0);
-        
+
     }
 }
     </style>
-    
+    <div class="container">
     <div class="wrapper">
         <div class="form-wrapper login">
             <form method="post" action="">
-              {% csrf_token %}  
+              {% csrf_token %}
 
                 <div class="contactInfo">
                     <h2 class="contactInfo-h">Contact Info</h2>
@@ -474,18 +614,19 @@
                     </span>
                     <input type="text" placeholder="Message" name="message" required>
                 </div>
-                
+
                 <button type="submit" class="Button__Message">Send Message</button>
             </form>
         </div>
     </div>
+</div>
 
 
 
     <script src="https://unpkg.com/scrollreveal"></script>
       <script>
         //Scroll Reveal//
-    
+
        const sr = ScrollReveal({
         origin: 'top',
         distance: '60px',
@@ -498,9 +639,9 @@
        sr.reveal('.input-box,fa-location-dot,fa-envelope,fa-phone',  { origin: 'top' })
        sr.reveal('.history__description, .Description_Content, .Description_Content1', { origin: 'bottom' })
        sr.reveal('.loader', { interval: 100 })
-    
-    
-    
+
+
+
     //Scroll Reveal Ending//
       </script>
 {% endblock content %}
