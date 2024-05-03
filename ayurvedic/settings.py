@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-60o8k_u)tf-&gc5hp0j72rybolr)63+ssa!p6ef^d_p0$fgf=u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tk-ayurvedic-pharmacy.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['tk-ayurvedic-pharmacy.onrender.com']
 
 
 # Application definition
@@ -69,7 +69,7 @@ DATABASES = {
         "NAME": "ayurvedic_ikwh",
         "USER": "ayurvedic_user",
         "PASSWORD": "WjbTyBA1x1gOFVDjqXi7L962MVEPHp52",
-        "HOST": "dpg-copt4bv79t8c7385p5bg-a.singapore-postgres.render.com",
+        "HOST": "dpg-copt4bv79t8c7385p5bg-a.singapore-postgres.render.com, tk-ayurvedic-pharmacy.onrender.com",
         "PORT": "5432",
     }
 }
