@@ -69,7 +69,7 @@ DATABASES = {
         "NAME": "ayurvedic_ikwh",
         "USER": "ayurvedic_user",
         "PASSWORD": "WjbTyBA1x1gOFVDjqXi7L962MVEPHp52",
-        "HOST": "dpg-copt4bv79t8c7385p5bg-a.singapore-postgres.render.com, tk-ayurvedic-pharmacy.onrender.com",
+        "HOST": "dpg-copt4bv79t8c7385p5bg-a.singapore-postgres.render.com",
         "PORT": "5432",
     }
 }
